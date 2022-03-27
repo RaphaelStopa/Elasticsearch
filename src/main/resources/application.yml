@@ -1,0 +1,24 @@
+#mudei aqui tambem
+#elasticsearch:
+#  url=localhost:9200:
+
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/GFT?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: gft
+    password: gft
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
+  main:
+    allow-bean-definition-overriding: true
