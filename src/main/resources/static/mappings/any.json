@@ -1,0 +1,10 @@
+{
+  "properties" : {
+    "id": {
+      "type": "Keyword"
+    },
+    "number": {
+      "tupe": "text"
+    }
+  }
+}

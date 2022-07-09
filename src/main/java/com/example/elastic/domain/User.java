@@ -17,14 +17,16 @@ import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.FieldType;
+import org.springframework.data.elasticsearch.annotations.Setting;
 
 /**
- * A user.
+ * 11:44 nao coloquei o index field e nem exigia o settings mais coloqeui
  */
 @Entity
-@Table(name = "jhi_user")
+@Table(name = "app_user")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @org.springframework.data.elasticsearch.annotations.Document(indexName = "user")
+@Setting(settingPath = "static/es-settings.json")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
